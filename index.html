@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD DATABASE</title>
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+      <!-- start Navbar -->
+      <nav class="navbar navbar-light  py-2">
+        <div class="container">
+          <a class="navbar-brand text-white fw-bolder fs-4" href="#">
+           CRUD DATABASE
+          </a>
+        </div>
+      </nav>
+      <!-- ebd Navbar -->
+
+      <!-- start add data -->
+        <section class="crud w-75 mx-auto my-5 py-5 bg-white">
+          <div class="container">
+            <div class="form-group px-4">
+              <label for="firstName">First Name</label> <span> * </span>
+              <input type="text" id="firstName" class="form-control" />
+              <label for="lastName">Last Name</label> <span> * </span>
+              <input type="text" id="lastName" class="form-control" />
+              <label for="email">Email</label> <span> * </span>
+              <input type="email" id="email" class="form-control"/>
+              <label for="phone">Phone</label> <span> * </span>
+              <input type="number" id="phone" class="form-control"/>
+              <label for="locations">Location</label> <span> * </span>
+              <input type="text" id="locations" class="form-control" />
+              <label for="hobby">Hobby</label> <span> * </span>
+              <textarea class="form-control" id="hobby"rows="3"></textarea>
+            </div>
+            <div class="btn-crud text-center mt-5">
+              <button  class="btn px-4 rounded-pill" id="addBtn">Add Item</button>
+              <button  class="btn mx-3 rounded-pill ">Download CSV</button>
+            </div>
+            </div>
+        </section>
+      <!-- end add data -->
+
+        <!-- start crud-table -->
+        <section class="crud-table w-75 mx-auto my-5 py-5 bg-white">
+          <div class="container">
+            <div class="form-group px-4">
+              <input onkeyup=" searchProduct(this.value)" class="form-control my-4 " id="search" type="search" placeholder=" Search  by First Name..." />
+              <table class="table  table-hover text-center mt-5">
+                <thead class="table-head">
+                  <th>ID</th>
+                  <th>Firsrt</th>
+                  <th>Last</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Location</th>
+                  <th>Hobby</th>
+                  <th>Actions</th>
+                </thead>
+                <tbody id="tBody">    
+                </tbody>
+                
+            </div>
+          </div>
+        </section>
+        <!-- end crud-table -->
+
+
+
+  
+
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
